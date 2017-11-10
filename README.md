@@ -1,50 +1,22 @@
+# Silverstripe Lottie Animation
 
-- bodymovin library (js)
-- json file of the animation export (json)
-- performance (size)
-- page position, how it fits into the page (css, html)
-- interactions (js, a tags)
-- animation type (loop, one-of, on-interaction)
-- browser support, device support, limitations (fallbacks)
-- accessibility
+This module aims to streamline the processs to add SVG animations into your projects.
 
-- upload json through the CMS?
+Uses [Lottie](https://airbnb.design/lottie/) and the [bodymovin.js](https://github.com/bodymovin) library to create lightweight SVG animations from a JSON file exported from After Effects using the Bodymovin extension.
 
+You will need:
 
+- A JSON file of the animation exported from After effects
 
-SS4 has landed - Banner
-Animated ()
+```
+<% include Lottie Path="path/to/file/data.json", Autoplay="true", Loop="true" %>
+```
 
-Static (1)
-
-
-
-<% include Animated data="link", width="", height="" %>
-
-
-
-Bring in the bodymovin library:
-- download the file (3)
-- cdn (2)
-- npm/yarn (1)
-    - matches current workflow/build tooling
-    - fixes to a version
-    - sites with no build tooling
-
-Require the bodymovin library:
-- set path in template <script src="node_modules/{path}.js"></script> (3)
-- set path in requirements Requirements::js(node_modules/{path}.js) (2)
-- module imports (1)
-
-How do we get json??
-- 
-
-
-
-TODO:
-- Dependencies as requirements
-- Detail app id
-
-- Might be enforcing vue???
-    - Try one without, just using es6?
+## TODO
+- [ ] Fallback to static image for non SVG supported browsers and devices
+- [ ] Interactions (on click etc)
+- [ ] Permissions on json files
+- [ ] CMS JSON upload
+- [ ] CMS editable attributes for each animation
+- [ ] Accessibility
 
