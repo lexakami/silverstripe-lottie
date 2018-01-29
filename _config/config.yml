@@ -1,3 +1,6 @@
 Page_Controller:
   extensions:
     - LottieExtension
+File:
+  allowed_extensions:
+    ['', 'json']
