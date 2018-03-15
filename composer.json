@@ -1,0 +1,15 @@
+{
+    "name": "lexakami/silverstripe-lottie",
+    "description": "Add SVG animations into your web projects with ease using Lottie and bodymovin.js",
+    "type": "silverstripe-module",
+    "require": {
+        "silverstripe/framework": "^3.6"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Mikaela Young",
+            "email": "mikaela@silverstripe.com"
+        }
+    ]
+}

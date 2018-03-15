@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Default buildchain - yarn, webpack, ES6, SASS",
   "main": "dist/app.js",
-  "author": "Name <email>",
+  "author": "Mikaela Young <mikaela@silverstripe.com>",
   "private": true,
   "scripts": {
     "build": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
