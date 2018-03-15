@@ -8,15 +8,19 @@ You will need:
 
 - A JSON file of the animation exported from After effects
 
+To use, create an animation under the Animations tab in the CMS and upload your JSON animation file.
+
+Place in the template by using the Lottie include, specifying the name of the animation.
+
 ```
-<% include Lottie Path="path/to/file/data.json", Autoplay="true", Loop="true" %>
+<% include Lottie Name="My Animation Name" %>
 ```
 
 ## TODO
-- [ ] Fallback to static image for non SVG supported browsers and devices
+- [ ] Upgrade to be SS4 compatible
 - [ ] Interactions (on click etc)
-- [ ] Permissions on json files
-- [ ] CMS JSON upload
-- [ ] CMS editable attributes for each animation
-- [ ] Accessibility
-
+- [ ] Fallback to static image for non SVG supported browsers and devices
+- [x] Permissions on json files
+- [x] CMS JSON upload
+- [x] CMS editable attributes for each animation
+- [x] Accessibility

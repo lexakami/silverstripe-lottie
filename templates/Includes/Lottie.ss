@@ -1,7 +1,7 @@
 $setupLottieRequirements
 
 <% with $getLottieAnimation($Name) %>
-    <div data-lottie-path="$AnimationJson.URL"
+    <div data-lottie-path="$AnimationJson.URL" <% if $Description %>aria-label="$Description"<% end_if %>
         <% if $Autoplay %>data-lottie-autoplay="true"<% end_if %>
         <% if $Loop %>data-lottie-loop="true"<% end_if %>
         class="js-lottie"

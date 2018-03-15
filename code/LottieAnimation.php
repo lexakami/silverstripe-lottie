@@ -7,6 +7,7 @@ class LottieAnimation extends DataObject {
      */
     private static $db = [
         'Name' => 'Varchar(255)',
+        'Description' => 'Varchar(255)',
         'Autoplay' => 'Boolean',
         'Loop' => 'Boolean',
     ];
@@ -16,7 +17,6 @@ class LottieAnimation extends DataObject {
      */
     private static $has_one = [
         'AnimationJson' => File::class,
-        'FallbackImage' => Image::class,
     ];
 
     /**
@@ -35,13 +35,16 @@ class LottieAnimation extends DataObject {
 
         $fields->addFieldsToTab('Root.Main',
             [
-                TextField::create('Name', 'Name'),
+                $name = TextField::create('Name', 'Name'),
+                $description = TextField::create('Description', 'Description'),
                 UploadField::create('AnimationJson', 'Animation JSON'),
-                UploadField::create('FallbackImage', 'Fallback Image'),
                 CheckboxField::create('Autoplay', 'Autoplay'),
                 CheckboxField::create('Loop', 'Loop'),
             ]
         );
+
+        $name->setDescription('This name must be unique, and match the one specified in the template');
+        $description->setDescription('Short description of the animation. This is used as the label for accessibility purposes.');
 
         return $fields;
     }
