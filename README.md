@@ -2,13 +2,21 @@
 
 This module aims to streamline the processs to add SVG animations into your projects.
 
-Uses [Lottie](https://github.com/airbnb/lottie-web) and the [bodymovin.js](https://github.com/bodymovin) library to create lightweight SVG animations for the web, from a JSON file exported from After Effects using the Bodymovin extension. 
+Uses [Lottie](https://github.com/airbnb/lottie-web) and the [bodymovin.js](https://github.com/bodymovin) library to create lightweight SVG animations for the web, from a JSON file exported from After Effects using the Bodymovin extension.
+
+## Installation
+
+```
+composer require lexakami/silverstripe-lottie
+```
+
+## Usage
 
 You will need:
 
 - A JSON file of the animation exported from After effects - [Step by step walkthrough](http://airbnb.io/lottie/after-effects/getting-started.html) on creating compatible animations.
 
-To use, create an animation under the Animations tab in the CMS and upload your JSON animation file.
+Create an animation under the Animations tab in the CMS and upload your JSON animation file.
 
 Place in the template by using the Lottie include, specifying the name of the animation.
 
