@@ -2,7 +2,7 @@
 
 This module aims to streamline the processs to add SVG animations into your projects.
 
-Uses [Lottie](https://github.com/airbnb/lottie-web) and the [bodymovin.js](https://github.com/bodymovin) library to create lightweight SVG animations for the web, from a JSON file exported from After Effects using the Bodymovin extension. 
+Uses [Lottie](https://github.com/airbnb/lottie-web) and the [bodymovin.js](https://github.com/bodymovin) library to create lightweight SVG animations for the web, from a JSON file exported from After Effects using the Bodymovin extension.
 
 You will need:
 
@@ -17,7 +17,7 @@ Place in the template by using the Lottie include, specifying the name of the an
 ```
 
 ## TODO
-- [ ] Upgrade to be SS4 compatible
+- [x] Upgrade to be SS4 compatible
 - [ ] Interactions (on click etc)
 - [ ] Fallback to static image for non SVG supported browsers and devices
 - [x] Permissions on json files
