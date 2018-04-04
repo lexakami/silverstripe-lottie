@@ -25,7 +25,7 @@ Place in the template by using the Lottie include, specifying the name of the an
 ```
 
 ## TODO
-- [ ] Upgrade to be SS4 compatible
+- [x] Upgrade to be SS4 compatible
 - [ ] Interactions (on click etc)
 - [ ] Fallback to static image for non SVG supported browsers and devices
 - [x] Permissions on json files

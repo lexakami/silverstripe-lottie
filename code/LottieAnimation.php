@@ -1,6 +1,19 @@
 <?php
 
+namespace SilverStripe\Lottie;
+
+use SilverStripe\Assets\File;
+use SilverStripe\Forms\TextField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\ORM\DataObject;
+
 class LottieAnimation extends DataObject {
+
+    /**
+     * @var string
+     */
+    private static $table_name = 'LottieAnimation';
 
     /**
      * @var array
@@ -47,5 +60,16 @@ class LottieAnimation extends DataObject {
         $description->setDescription('Short description of the animation. This is used as the label for accessibility purposes.');
 
         return $fields;
+    }
+
+    public function onAfterWrite()
+    {
+        parent::onAfterWrite();
+
+        $json = $this->AnimationJson();
+        if ($json && $json->exists()) {
+            $json->write();
+            $json->writeToStage('Live');
+        }
     }
 }

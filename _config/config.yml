@@ -1,6 +1,6 @@
-Page_Controller:
+PageController:
   extensions:
-    - LottieExtension
-File:
+    - SilverStripe\Lottie\LottieExtension
+SilverStripe\Assets\File:
   allowed_extensions:
     ['', 'json']
